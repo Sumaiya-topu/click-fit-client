@@ -90,3 +90,39 @@ button:hover {
     color: #3498db;
     cursor: pointer;
 }
+
+.bg1{
+background-color: #fe7878;
+}
+
+.bg2{
+    background-color: #fe9191;
+}
+
+.cardtext1{
+ color: white;
+ text-align: center;
+ font-weight: 400;
+}
+ .cardtitle1{
+    color: white;
+    text-align: center;
+    font-weight: 400;
+ }
+
+ .button1{
+    background-color: #fe7878;
+    border-radius: 10px;
+ }
+ .textPrimaryLight{
+    color:#fe7878 ;
+    font-weight: 400;
+ }
+ .textPrimaryBold{
+    color:#fe7878 ;
+    font-weight: 800;
+ }
+
+ .borderColor{
+    border: #fe7878 5px solid;
+ }
