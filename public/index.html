@@ -78,14 +78,40 @@
     <section>
 <!-- Area to display content from Numbers API -->
 <div id="numbersApiContent"></div>
+<div id="numbersApiContent2"></div>
 
     </section>
 
 
 <!-- image upload section start -->
-    <input type="file" id="imageInput">
-    <button onclick="uploadImage()">Upload Image</button>
+<!-- <div class="file-input-container"> -->
+    <!-- Plus icon button -->
+    <!-- <label for="imageInput" id="plusIcon">+</label> -->
+    <!-- File input -->
+    <!-- <input type="file" id="imageInput"> -->
+</div>
+  
+    <!-- Drop area -->
+    <!-- <div class="drop-area" id="dropArea">
+        <p>Drag & Drop Images or Click to Upload</p>
+    </div> -->
+
+
+    <div class="file-input-container">
+        <!-- Plus icon button -->
+        <label for="imageInput" id="plusIcon">+</label>
+        <!-- File input -->
+        <input type="file" id="imageInput" style="display:none">
+        <button onclick="uploadImage()">Upload Image</button>
+    </div>
+    
+    <!-- Drop area -->
+    <div class="drop-area" id="dropArea">
+        <p>Drag & Drop Images or Click to Upload</p>
+    </div>
+
     <!-- image upload section end -->
+
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
