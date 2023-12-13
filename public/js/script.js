@@ -52,3 +52,29 @@ const uploadImage = () => {
 // $(document).ready(function () {
 //   fetchNumbersApiContent();
 // });
+
+// Function to fetch content from Numbers API and update the page
+function fetchNumbersApiContent() {
+  $.ajax({
+    url: "http://numbersapi.com/1/30/date?json",
+    type: "GET",
+    dataType: "json",
+    success: function (data) {
+      console.log(data);
+      // Update the content on the page
+      $("#numbersApiContent").html("<p>" + data.text + "</p>");
+    },
+    error: function (error) {
+      console.error("Error fetching content from Numbers API", error);
+      // Optionally, handle error display on the page
+      $("#numbersApiContent").html(
+        "<p>Error fetching content from Numbers API</p>"
+      );
+    },
+  });
+}
+
+// Call the function when the page is loaded
+$(document).ready(function () {
+  fetchNumbersApiContent();
+});
