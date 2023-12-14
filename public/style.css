@@ -55,6 +55,8 @@ button:hover {
     position: relative;
     overflow: hidden;
     display: inline-block;
+    text-align: center;
+    margin-top: 10px;
 }
 
 /* Style for the file input */
@@ -98,15 +100,25 @@ background-color: #fe7878;
 .bg2{
     background-color: #fe9191;
 }
+.bg3{
+    background-color: #ffdddd;
+}
 
 .cardtext1{
  color: white;
  text-align: center;
  font-weight: 400;
 }
+.cardtext2{
+    color: rgb(122, 122, 122);
+}
  .cardtitle1{
     color: white;
     text-align: center;
+    font-weight: 400;
+ }
+ .cardtitle2{
+    color: rgba(0, 0, 0, 0.842);
     font-weight: 400;
  }
 
@@ -125,4 +137,30 @@ background-color: #fe7878;
 
  .borderColor{
     border: #fe7878 5px solid;
+ }
+
+ .border2{
+    width: 20px;
+    height: 30px;
+    border: #fe7878 1px solid;
+    margin-bottom: 50px;
+ }
+
+ .section3{
+    display: flex;
+    margin-top: 5%;
+ }
+
+ .section{
+    margin-top: 10%;
+    text-align: center;
+ }
+
+ .uploadContainer{
+    padding: 80px 0 100px 0px;
+ }
+ .visuals{
+    margin-top: 10%;
+    padding-top: 100px;
+    text-align: center;
  }
