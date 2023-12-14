@@ -152,7 +152,7 @@ background-color: #fe7878;
  }
 
  .section{
-    margin-top: 10%;
+    margin: 10% 0%;
     text-align: center;
  }
 
@@ -163,4 +163,12 @@ background-color: #fe7878;
     margin-top: 10%;
     padding-top: 100px;
     text-align: center;
+ }
+
+ .footer{
+    background-color: #131313;
+    padding: 100px;
+    display: flex;
+    justify-content: end;
+    align-items: baseline;
  }

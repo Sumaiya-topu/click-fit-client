@@ -81,7 +81,9 @@ function fetchNumbersApiContent() {
     success: function (data) {
       console.log(data);
       // Update the content on the page
-      $("#numbersApiContent").html("<p>" + data.text + "</p>");
+      $("#numbersApiContent").html(
+        "<h5>" + data.year + "</h5>" + "<p>" + data.text + "</p>"
+      );
     },
     error: function (error) {
       console.error("Error fetching content from Numbers API", error);
@@ -106,7 +108,9 @@ function fetchNumbersApiContent2() {
     success: function (data) {
       console.log(data);
       // Update the content on the page
-      $("#numbersApiContent2").html("<p>" + data.text + "</p>");
+      $("#numbersApiContent2").html(
+        "<h5>" + data.year + "</h5>" + "<p>" + data.text + "</p>"
+      );
     },
     error: function (error) {
       console.error("Error fetching content from Numbers API", error);
