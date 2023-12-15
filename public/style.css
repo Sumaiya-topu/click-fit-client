@@ -135,8 +135,11 @@ background-color: #fe7878;
     font-weight: 800;
  }
 
- .borderColor{
+ .box-border{
     border: #fe7878 5px solid;
+    height: 80px;
+    width: 50px;
+    margin-left: 4%;
  }
 
  .border2{
@@ -172,3 +175,82 @@ background-color: #fe7878;
     justify-content: end;
     align-items: baseline;
  }
+ .hero-text{
+    width: 100%;
+    margin-left: 10%;
+ }
+.hero-image{
+    width: 100%;
+}
+.second-section{
+    display: flex;
+    padding: 0% 10%;
+}
+.box{
+    width: 50%;
+    padding: 60px 50px;
+ 
+}
+
+
+
+ @media (max-width: 992px) {
+    .nav-margin{
+        padding-left: 10%;
+    }
+   .hero-image{
+    display: none;
+   }
+   .hero-text{
+    color:#fff;
+    margin-left: 10%;
+   }
+   .hero{
+    background-image: url('../public/assests/photo-1613685044678-0a9ae422cf5a.avif');
+    background-size: cover;
+    background-attachment: fixed;
+    padding-bottom: 10%;
+   }
+   .second-section {
+       display: flex;
+       padding: 0px 10px;
+   }
+   .box{
+    padding: 20px;
+   }
+   .cardtitle1{
+    font-size: 20px;
+   }
+   .cardtext1{
+    font-size:small;
+   }
+ }
+
+  @media (min-width: 993px) and (max-width: 1294px){
+    .second-section {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        }
+        .box {
+            padding: 20px;
+            width: 100%;
+        }
+        .cardtitle1 {
+            font-size: 25px;
+        }
+
+        .cardtext1 {
+            font-size:medium;
+        }
+  }
+
+   @media (max-width: 622px){
+    .second-section {
+        display:grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+        .box {
+            padding: 20px;
+            width: 100%;
+        }
+   }
