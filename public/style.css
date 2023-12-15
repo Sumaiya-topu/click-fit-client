@@ -2,6 +2,13 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    --nav-load-time: 300ms;
+    --nav-link-load-time :500ms;
+    --heading-load-delay : 500ms;
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 .drop-area {
@@ -42,14 +49,96 @@ button {
     transition: background-color 0.3s ease-in-out;
 }
 
+
 button:hover {
     background-color: #2980b9;
 }
+.button1:hover {
+    background-color: #f25757;
+   
+}
 
+nav{
+    animation: nav-load var(--nav-load-time) ease-in;
+}
 .nav{
     display: flex;
     justify-content: flex-end;
    
+}
+.nav li:hover{
+    background-color: #c0bfc084;
+}
+.nav li{
+    padding: 0px 30px;
+    border-radius: 10px;
+    animation-name: nav-link-load;
+    animation-duration:var(--nav-link-load-time);
+    animation-timing-function: ease-in;
+    animation-delay: var(--nav-load-time) ;
+    animation-fill-mode: forwards;
+    transform: scale(0);
+}
+
+ h5{
+    /* animation: nav-load var(--nav-load-time) ease-in ; */
+    animation: heading-load 300ms ease-in var(--heading-load-delay) ;
+    animation-fill-mode: forwards;
+    transform: translateY(-20%);
+    opacity: 0;
+}
+ h1{
+    /* animation: nav-load var(--nav-load-time) ease-in ; */
+    animation: heading-load 300ms ease-in var(--heading-load-delay) ;
+    animation-fill-mode: forwards;
+        transform: translateY(-20%);
+        opacity: 0;
+}
+ h3{
+    /* animation: nav-load var(--nav-load-time) ease-in ; */
+    animation: heading-load 300ms ease-in var(--heading-load-delay) ;
+    animation-fill-mode: forwards;
+        transform: translateY(-20%);
+        opacity: 0;
+}
+ .card-box{
+    /* animation: nav-load var(--nav-load-time) ease-in ; */
+    animation: heading-load 300ms ease-in var(--heading-load-delay) ;
+    animation-fill-mode: forwards;
+        transform: translateY(-20%);
+        opacity: 0;
+}
+
+p{
+    animation: heading-load 300ms ease-in var(--heading-load-delay);
+    animation-fill-mode: forwards;
+        transform: translateY(-20%);
+        opacity: 0;
+}
+
+button{
+    animation: heading-load 300ms ease-in var(--heading-load-delay);
+        animation-fill-mode: forwards;
+        transform: translateY(-20%);
+        opacity: 0;
+}
+
+.box-border {
+    border: #fe7878 5px solid;
+    height: 80px;
+    width: 50px;
+    margin-left: 4%;
+    animation: heading-load 300ms ease-in var(--heading-load-delay);
+        animation-fill-mode: forwards;
+        transform: translateY(-20%);
+        opacity: 0;
+}
+
+img{
+    animation: img-load 300ms ease-in var(--heading-load-delay);
+        animation-fill-mode: forwards;
+       transform:translateX(-20%) ;
+        opacity: 0;
 }
 
 .file-input-container {
@@ -71,6 +160,7 @@ button:hover {
     cursor: pointer;
     opacity: 0;
     filter: alpha(opacity=0);
+    
 }
 
 /* Style for the plus icon button */
@@ -82,6 +172,10 @@ button:hover {
     color: #3498db;
     text-align: center;
     cursor: pointer;
+    animation: heading-load 300ms ease-in var(--heading-load-delay);
+        animation-fill-mode: forwards;
+        transform: translateY(-20%);
+        opacity: 0;
 }
 
 /* Style for the drop area */
@@ -92,10 +186,15 @@ button:hover {
     text-align: center;
     color: #3498db;
     cursor: pointer;
+    animation: heading-load 300ms ease-in var(--heading-load-delay);
+        animation-fill-mode: forwards;
+        transform: translateY(-20%);
+        opacity: 0;
 }
 
-.bg1{
+.section2{
 background-color: #fe7878;
+
 }
 
 .bg2{
@@ -136,12 +235,7 @@ background-color: #fe7878;
     font-weight: 800;
  }
 
- .box-border{
-    border: #fe7878 5px solid;
-    height: 80px;
-    width: 50px;
-    margin-left: 4%;
- }
+ 
 
  .border2{
     width: 20px;
@@ -189,7 +283,15 @@ background-color: #fe7878;
 .box{
     width: 50%;
     padding: 60px 50px;
+    animation: fade linear;
+    animation-timeline: view();
  
+}
+
+.box2:hover{
+    transform: translateY(-10%);
+    transition: opacity 300ms,transform 300ms;
+    
 }
 
  .section3 {
@@ -200,6 +302,7 @@ background-color: #fe7878;
 .cardBody{
     width: 80%;
 }
+
 
 
 /* responsive */
@@ -251,7 +354,7 @@ background-color: #fe7878;
         grid-template-columns: repeat(3, 1fr);
         }
         .box {
-            padding: 20px;
+            padding: 40px 20px;
             width: 100%;
         }
         .cardtitle1 {
@@ -307,4 +410,58 @@ background-color: #fe7878;
             margin: 0px 0px;
             padding: 0px 20px;
         }
+   }
+
+
+   @keyframes nav-load{
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+   }
+
+   @keyframes nav-link-load{
+    0% {
+            transform: scale(0);
+        }
+    90%{
+        transform: scale(1.1);
+    }
+        100% {
+            transform:scale(1);
+        }
+   }
+   @keyframes heading-load{
+    0% {
+            transform: translateY(-20%);
+            opacity: 0;
+        }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+   }
+
+   @keyframes img-load{
+    0% {
+            transform: translateX(20%);
+            opacity: 0;
+        }
+    
+        100% {
+            transform: translateX(0%);
+            opacity: 1;
+        }
+   }
+
+   @keyframes fade{
+    0%{
+        transform: translateY(0%);
+    }
+    100%{
+        transform: translateY(15%);
+    }
    }
