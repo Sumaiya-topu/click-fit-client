@@ -49,6 +49,7 @@ button:hover {
 .nav{
     display: flex;
     justify-content: flex-end;
+   
 }
 
 .file-input-container {
@@ -149,10 +150,7 @@ background-color: #fe7878;
     margin-bottom: 50px;
  }
 
- .section3{
-    display: flex;
-    margin-top: 5%;
- }
+
 
  .section{
     margin: 10% 0%;
@@ -182,6 +180,8 @@ background-color: #fe7878;
 .hero-image{
     width: 100%;
 }
+
+/* Second section style */
 .second-section{
     display: flex;
     padding: 0% 10%;
@@ -192,8 +192,17 @@ background-color: #fe7878;
  
 }
 
+ .section3 {
+     display: flex;
+     justify-content: center;
+     padding: 0% 10%;
+ }
+.cardBody{
+    width: 80%;
+}
 
 
+/* responsive */
  @media (max-width: 992px) {
     .nav-margin{
         padding-left: 10%;
@@ -214,6 +223,7 @@ background-color: #fe7878;
    .second-section {
        display: flex;
        padding: 0px 10px;
+       justify-content: center;
    }
    .box{
     padding: 20px;
@@ -224,9 +234,18 @@ background-color: #fe7878;
    .cardtext1{
     font-size:small;
    }
+    .section3 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+       
+    }
+    
  }
 
   @media (min-width: 993px) and (max-width: 1294px){
+    .nav{
+        width: 90%;
+    }
     .second-section {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -242,9 +261,20 @@ background-color: #fe7878;
         .cardtext1 {
             font-size:medium;
         }
+        .section3 {
+            display: flex;
+            justify-content: center;
+            padding: 0% 5%;
+        }
+
+        .cardBody {
+            width: 100%;
+            padding: 0px 10px;
+        }
   }
 
    @media (max-width: 622px){
+   
     .second-section {
         display:grid;
         grid-template-columns: repeat(1, 1fr);
@@ -252,5 +282,29 @@ background-color: #fe7878;
         .box {
             padding: 20px;
             width: 100%;
+        }
+        .section3 {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            margin: 5% auto;
+            gap: 50px 0px;
+        }
+        .cardBody {
+            width: 100%;
+            padding: 0px 10px;
+        }
+        .cardtext2{
+            font-size: small;
+        }
+        .textPrimaryLight{
+            font-size: small;
+        }
+                  
+   }
+
+   @media (max-width: 452px){
+    .hero-text {
+            margin: 0px 0px;
+            padding: 0px 20px;
         }
    }
